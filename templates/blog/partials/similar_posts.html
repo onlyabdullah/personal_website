@@ -1,0 +1,14 @@
+<h5 class="title">Similar Posts</h5>
+<ul class="list-group list-group-flush">
+    {% for post in similar_posts %}
+        <a href="{{ post.get_absolute_url }}">
+            <div class="card mt-auto mb-2">
+                <div class="card-body">
+                    {{ post.title.title }}
+                </div>
+            </div>
+        </a>
+    {% empty %}
+        <p class="mb-2 text-muted">There are no similar posts</p>
+    {% endfor %}
+</ul>

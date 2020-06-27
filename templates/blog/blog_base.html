@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load blog_tags %}
+{% load static %}
+
+{% block navbar %}
+  {% include 'common_partials/navbar.html' with page="blog" %}
+{% endblock navbar %}
+
+{% block header %}
+    {% include "common_partials/header.html" with page_title="Blog" %}
+{% endblock header %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                {% block blog_content %}{% endblock blog_content %}
+            </div>
+            <div class="col-md-4">
+                {% block similar_posts %}{% endblock similar_posts %}
+                {% latest_posts %}
+                {% most_commented_posts %}
+            </div>
+        </div>
+    </div>
+{% endblock content %}

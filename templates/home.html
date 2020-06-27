@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load blog_tags %}
+
+{% block title %}
+  Abdullah Elsayed - Home
+{% endblock title %}
+
+{% block navbar %}
+  {% include 'common_partials/navbar.html' with page="home" %}
+{% endblock navbar %}
+
+{% block header %}
+    {% include "common_partials/header.html" with page_title="Personal Website" %}
+{% endblock header %}
+
+{% block content %}
+<div class="profile-page sidebar-collapse">
+  <div class="main main-raised">
+    <div class="profile-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 ml-auto mr-auto">
+            <div class="profile">
+              <div class="avatar">
+                <img src="{% static 'img/abdullah.jpg' %}" alt="Circle Image" class="img-raised rounded-circle img-fluid">
+              </div>
+              <div class="name">
+                <h3 class="title">Abdullah Elsayed</h3>
+                <h6>Computer Science Student - Full Stack Developer</h6>
+                <a href="https://twitter.com/onlyabdullah98" class="btn btn-just-icon btn-link btn-twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.instagram.com/onlyabdullah98" class="btn btn-just-icon btn-link btn-instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+                <a href="https://github.com/onlyabdullah" class="btn btn-just-icon btn-link btn-github" target="_blank"><i class="fa fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="description text-center">
+          <p>Computer Science student at the University of Birmingham. Full Stack developer with experience in Python, Java, JavaScript, Django, ReactJS, and Node.js</p>
+        </div>
+        <div class="space-30"></div>
+        <h3 class="title">Lastest posts</h3>
+        <div class="row">
+          {% for post in latest_posts %}
+            <div class="col-md-4">
+              {% include "blog/partials/post_card.html" with post=post %} 
+            </div>
+          {% endfor %}
+        </div>
+        <a class="btn btn-rose" href="{% url 'blog:posts_list' %}">SEE ALL POSTS</a>
+        <div class="space-50"></div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

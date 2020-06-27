@@ -1,0 +1,25 @@
+<footer class="footer footer-default">
+  <div class="container">
+    <nav class="float-left">
+      <ul>
+        <li>
+          <a href="{% url 'home' %}">
+              Home
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'blog:posts_list' %}">
+              Blog
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="copyright float-right">
+      ©
+      <script>
+        document.write(new Date().getFullYear())
+      </script>, by
+      <a href="{% url 'home' %}" target="_blank">Abdullah Elsayed</a>
+    </div>
+  </div>
+</footer>

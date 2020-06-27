@@ -1,0 +1,12 @@
+<h5 class="title">Most Commented Posts</h5>
+<ul class="list-group list-group-flush">
+    {% for post in most_commented_posts %}
+        <a href="{{ post.get_absolute_url }}">
+            <div class="card mt-auto mb-2">
+                <div class="card-body">
+                    {{ post.title.title }}
+                </div>
+            </div>
+        </a>
+    {% endfor %}
+</ul>

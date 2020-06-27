@@ -25,7 +25,7 @@ SECRET_KEY = '+s+c&ky6_gxv)xvz=izu0^#0rpfg_o1&9rim+ek4mjbgrf27%!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['onlyabdullah.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'onlyabdullah.pythonanywhere.com']
 
 
 # Application definition
@@ -71,7 +71,7 @@ TEMPLATES = [
 ]
 
 STATIC_URL = '/assets/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 WSGI_APPLICATION = 'personal_website.wsgi.application'
 

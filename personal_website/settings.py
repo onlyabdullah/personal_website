@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '+s+c&ky6_gxv)xvz=izu0^#0rpfg_o1&9rim+ek4mjbgrf27%!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', 'onlyabdullah.pythonanywhere.com']
 
@@ -72,6 +72,9 @@ TEMPLATES = [
 
 STATIC_URL = '/assets/'
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "staticfiles")
+]
 
 WSGI_APPLICATION = 'personal_website.wsgi.application'
 

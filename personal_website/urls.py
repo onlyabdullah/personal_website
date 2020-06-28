@@ -6,7 +6,7 @@ from blog.helpers import get_latest_posts
 
 urlpatterns = [
     path('', TemplateView.as_view(
-        template_name='home.html', extra_context={'latest_posts': get_latest_posts()}), name='home'),
+        template_name='home.html', extra_context={'latest_posts': get_latest_posts(4)}), name='home'),
     path('blog/', include('blog.urls', namespace='blog')),
 ]
 

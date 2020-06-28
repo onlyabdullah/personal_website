@@ -1,6 +1,6 @@
 {% load static %}
 
-<div class="page-header header-filter" data-parallax="true" style="{% if page_title == 'Blog' %}height: 300px;{% endif %} background-image: url({% static 'img/bg.png' %});">
+<div class="page-header header-filter" data-parallax="true" style="{% if page_title == 'Blog' %}height: 300px;{% else %}height: 540px;{% endif %} background-image: url({% static 'img/bg.png' %});">
   <div class="container">
     <div class="row">
       <div class="col-md-8 mt-4 ml-auto mr-auto">
